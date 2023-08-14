@@ -1,0 +1,16 @@
+blobfile==1.3.1
+tqdm
+mpi4py==3.1.4
+ttach==0.0.3
+kornia==0.6.8
+omegaconf==2.2.3
+opencv-python==4.1.2.30
+opencv-python-headless==4.5.4.60
+einops==0.6.0
+piq==0.7.0
+tokenizers==0.13.2
+timm==0.6.12
+hydra-core==1.2.0
+transformers==4.24.0
+pytorch-lightning==1.7.7
+

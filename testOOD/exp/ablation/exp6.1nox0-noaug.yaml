@@ -1,0 +1,24 @@
+dataset: Imagenet-1k
+ood_dataset: Imagenet-1k
+diffusion: guided-diffusion-psnr-dists
+diffusion.timestep_respacing: ddim100
+diffusion.early_stop_steps: 10
+
+diffusion.early_stop_thresh:
+  - 48.5
+  - 0.38
+runner.uncond_aux: True
+runner.distances:
+  - dists
+  - ssim
+  - lpips
+  - l2
+  - fsim
+  - mdsi
+  - vif
+  - gmsd
+  - logits
+loader_batch_size: 30
+
++diffusion.no_x0_hat: True
+diffusion.cutouts_num: -1

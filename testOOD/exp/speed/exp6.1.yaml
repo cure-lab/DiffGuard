@@ -1,0 +1,15 @@
+# adaptive early-stop cannot fully utilize gpus in current implementation. This
+# conifg disable adaptive early-stop to show the throughput when gpu utilization
+# is full
+
+dataset: Imagenet-1k
+ood_dataset: Imagenet-1k
+diffusion: guided-diffusion-psnr-dists
+diffusion.timestep_respacing: ddim100
+
+diffusion.early_stop_steps: 40  # set to 60 inversion steps
+diffusion.early_stop_metric: null  # disable adaptive early stop
+diffusion.early_stop_thresh: -1  # disable adaptive early stop
+
+runner.uncond_aux: False  # disable this
+loader_batch_size: 30

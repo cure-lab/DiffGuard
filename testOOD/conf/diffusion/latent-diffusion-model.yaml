@@ -1,0 +1,16 @@
+name: latent-diffusion-model
+target: ood_tester.latent_diffusion_model.LDMWrapper
+ldm_config_path: useful_data/ldm-cin256-v2.yaml
+ldm_weight_path: ../pretrained/ldm/cin256-v2/model.ckpt
+image_size: 256
+input_size: ${input_size}
+ddim_eta: 0.0
+ddim_steps: 100
+denoise_guidance_scale: 10.0
+diffuse_guidance_scale: 1.0
+unconditional_diffuse: True
+
+use_cam: True
+cam_cut: 0.3
+batch_size: ${loader_batch_size} # no need to split
+process_method: pad

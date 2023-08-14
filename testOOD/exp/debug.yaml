@@ -1,0 +1,9 @@
+dataset: Imagenet-1k
+ood_dataset: Imagenet-1k
+diffusion: guided-diffusion-psnr
+# diffusion.timestep_respacing: ddim100
+diffusion.early_stop_steps: 10
+
+try_run: True
+diffusion.timestep_respacing: ddim20
+loader_batch_size: 4

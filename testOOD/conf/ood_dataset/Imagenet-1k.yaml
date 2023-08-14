@@ -1,0 +1,28 @@
+name: imagenet_ood
+num_classes: 1000
+
+dataset_class: ImglistDataset
+interpolation: bilinear
+batch_size: '${loader_batch_size}'
+shuffle: False
+
+pre_size: 256
+image_size: ${input_size}
+num_workers: '${num_workers}'
+num_gpus: '${num_gpus}'
+
+split_names: [nearood]
+nearood:
+  datasets: [species, inaturalist, openimageo, imageneto]
+  inaturalist:
+    data_dir: ../data/images_largescale/
+    imglist_pth: ./useful_data/benchmark_imglist/imagenet/test_inaturalist.txt
+  openimageo:
+    data_dir: ../data/images_largescale/
+    imglist_pth: ./useful_data/benchmark_imglist/imagenet/test_openimage_o.txt
+  imageneto:
+    data_dir: ../data/images_largescale/
+    imglist_pth: ./useful_data/benchmark_imglist/imagenet/test_imagenet_o.txt
+  species:
+    data_dir: ../data/images_largescale/
+    imglist_pth: ./useful_data/benchmark_imglist/imagenet/test_species.txt

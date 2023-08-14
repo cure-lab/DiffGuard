@@ -1,0 +1,7 @@
+dataset: Imagenet-1k
+ood_dataset: Imagenet-1k
+diffusion: latent-diffusion-model
+
+try_run: True
+diffusion.ddim_steps: 20
+loader_batch_size: 4

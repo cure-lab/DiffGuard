@@ -1,0 +1,29 @@
+name: imagenet
+num_classes: 1000
+pre_size: 256
+image_size: ${input_size}
+interpolation: bilinear
+
+num_workers: '${num_workers}'
+num_gpus: '${num_gpus}'
+
+split_names: [train, val, test]
+
+train:
+  dataset_class: ImglistDataset
+  data_dir: ../data/
+  imglist_pth: ./useful_data/benchmark_imglist/imagenet/train_imagenet.txt
+  batch_size: '${loader_batch_size}'
+  shuffle: True
+val:
+  dataset_class: ImglistDataset
+  data_dir: ../data/
+  imglist_pth: ./useful_data/benchmark_imglist/imagenet/val_imagenet.txt
+  batch_size: '${loader_batch_size}'
+  shuffle: False
+test:
+  dataset_class: ImglistDataset
+  data_dir: ../data/
+  imglist_pth: ./useful_data/benchmark_imglist/imagenet/test_imagenet.txt
+  batch_size: '${loader_batch_size}'
+  shuffle: False

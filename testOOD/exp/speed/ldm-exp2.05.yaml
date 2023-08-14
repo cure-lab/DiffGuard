@@ -1,0 +1,9 @@
+# no change, same as testOOD/exp/ldm-exp2.05.yaml
+
+dataset: Imagenet-1k
+ood_dataset: Imagenet-1k
+diffusion: latent-diffusion-model
+diffusion.ddim_steps: 5
+loader_batch_size: 48 
+
+input_size: 256

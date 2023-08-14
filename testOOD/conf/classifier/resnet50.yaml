@@ -1,0 +1,13 @@
+params:
+  model_name: resnet50
+  NormWrapper: True
+  mu:
+    - 0.485
+    - 0.456
+    - 0.406
+  sigma:
+    - 0.229
+    - 0.224
+    - 0.225
+ 
+cam_layer: layer4[-1]

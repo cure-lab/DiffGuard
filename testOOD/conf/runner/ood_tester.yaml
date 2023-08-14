@@ -1,0 +1,18 @@
+distances:
+  - dists
+  # - ssim
+  # - lpips
+  # - l2
+  # - fsim
+  # - mdsi
+  # - vif
+  # - gmsd
+  # - logits
+metrics:
+  - FPR@95
+  - AUROC
+  - AUPR_IN
+  - AUPR_OUT
+uncond_aux: False
+save_feat: True
+save_img: False

@@ -1,0 +1,28 @@
+defaults:
+  - _self_
+  - diffusion: guided-diffusion
+  - classifier: resnet50
+  - dataset: Imagenet-1k
+  - ood_dataset: Imagenet-1k
+  - runner: ood_tester
+
+task_id: "0.0.0"
+proj_name: DiffGuard
+hydra:
+  run:
+    dir: ../${proj_name}-log/outputs/${diffusion.name}_${now:%Y-%m-%d}_${now:%H-%M-%S}_${task_id}
+  output_subdir: hydra
+
+try_run: False
+log_root: ???
+rank: ???
+init_method: env://
+seed: 100
+preprocessor:
+  name: base
+need_aux: False
+input_size: 224
+num_gpus: 1
+num_workers: 4
+loader_batch_size: 32
+denoise_batch_size: 5  # for gdm only
