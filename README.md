@@ -1,5 +1,7 @@
 # DiffGuard
 
+[![arXiv](https://img.shields.io/badge/arXiv-2308.07687-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2308.07687)
+
 This repository contains the implementation of the ICCV2023 paper:
 
 > **DiffGuard: Semantic Mismatch-Guided Out-of-Distribution Detection using Pre-trained Diffusion Models** <br>
