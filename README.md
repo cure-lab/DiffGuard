@@ -123,7 +123,7 @@ Besides, we provides config to reproduce the results with oracle classifier, che
 ## Cite Us
 
 ```bibtex
-@article{gao2023diffguard,
+@inproceedings{gao2023diffguard,
   title={{DiffGuard}: Semantic Mismatch-Guided Out-of-Distribution Detection using Pre-trained Diffusion Models},
   author={Gao, Ruiyuan and Zhao, Chenchen and Hong, Lanqing and Xu, Qiang},
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
