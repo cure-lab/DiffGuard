@@ -44,7 +44,7 @@ Since we use the pretrained diffusion models, all the pretrained weights can be 
 - GDM: 256x256 diffusion (not class conditional), [256x256_diffusion_uncond.pt](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt)
 - LDM: LDM-VQ-8 on ImageNet, [cin.zip](https://ommer-lab.com/files/latent-diffusion/cin.zip)
   
-  > **NOTICE**: As pointed by [#1](https://github.com/cure-lab/DiffGuard/issues/1), LDM used the OpenImage dataset for pre-training. It may fit in OOD benchmarks.
+  > **NOTICE**: As pointed by [#1](https://github.com/cure-lab/DiffGuard/issues/1), LDM used the OpenImage dataset for pre-training. **This weight may not fit in OOD benchmarks**.
   
 - ResNet50 classifier: either from torchvision (ImageNet V1) or [OpenOOD](https://github.com/Jingkang50/OpenOOD)
 
